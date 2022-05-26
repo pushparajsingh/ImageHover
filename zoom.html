@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box
+        {
+            width: 700px;
+            height: 540px;
+            
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background: linear-gradient(to bottom, green,white);
+        }
+        #show{
+            width: 400px;
+            height: 300px;
+         
+            margin: 20px auto 20px auto;
+        }
+        #show img{
+            width: 400px;
+            height: 300px;
+        }
+        img{
+            box-shadow: 10px 10px 20px 4px black;
+        }
+        .xyz{
+            width: 100px;
+            height: 100px;
+          
+        }
+        #box2{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #box2 img{
+           width: 100px;
+           height: 100px;
+        }
+    </style>
+</head>
+<body bgcolor="black">
+    
+    <div id="box">
+        <div id="show">
+           <img src="https://www.publicdomainpictures.net/pictures/320000/velka/background-image.png" alt="main image" id="change">
+        </div>
+        <br/>
+        <br/>
+    
+        <div id="box2">
+            <div class="xyz"><img src="https://thumbs.dreamstime.com/z/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg" alt="image" onmouseover="change(this.src)"></div>
+            <div class="xyz"><img src="./pexels-photo-1454288.jpeg" alt="image" onmouseover="change(this.src)"></div>
+            <div class="xyz"><img src="./tree-g0e679a73a_1280.jpg" alt="image" onmouseover="change(this.src)"></div>
+            <div class="xyz"><img src="https://thumbs.dreamstime.com/z/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-122119019.jpg" alt="image" onmouseover="change(this.src)"></div>
+        </div>
+
+    </div>
+    <script>
+          var input = document.getElementById("change");
+           function change(val)
+           {
+               input.src = val;
+           }
+
+    </script>
+</body>
+</html>
